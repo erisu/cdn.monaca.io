@@ -1,0 +1,94 @@
+@mixin reset()
+  margin: 0
+  padding: 0
+  border: 0
+  width: auto
+  height: auto
+  line-height: 0
+  border-radius: 0
+  font-size: 0
+  color: #333
+  min-width: 0
+  text-shadow: 0
+  background-image: none
+  background-color: #f8f8f8
+  border: 1px solid #c8c8c8
+
+a, button
+  &.m-btn
+    @include reset()
+    
+    border-radius: 3px
+    box-sizing: border-box
+    text-align: center
+    display: inline-block
+    padding: 0px 16px
+    line-height: 1.6
+
+    &:hover
+      background-color: #e8e8e8
+      border-color: #b8b8b8
+
+    &:active
+      background-color: #d8d8d8
+      border-color: #a8a8a8
+
+    // btn-small is default with m-btn
+    min-width: 90px
+    height: 30px
+    font-weight: 600
+    font-size: 13px
+
+    &.m-btn-large
+      width: auto
+      height: 40px
+      font-weight: 700
+      font-size: 17px
+
+    &.m-btn-green
+      color: #fff
+      background-color: #8bcc37
+      border-color: #8bcc37
+
+      &:hover
+        background-color: #60b626
+
+      &:active
+        background-color: #44a900
+
+    &.m-btn-blue
+      color: #fff
+      background-color: #468fff
+      border-color: #468fff
+
+      &:hover
+        background-color: #2079ee
+        border-color: #2079ee
+
+      &:active
+        background-color: #006cc8
+        border-color: #006cc8
+
+    &.m-btn-default-dark
+      color: #333333
+      background-color: #ececec
+      border-color: #bcbcbc
+
+      &:hover
+        background-color: #dcdcdc
+        border-color: #acacac
+
+      &:active
+        background-color: #cccccc
+        border-color: #9c9c9c
+
+    &.m-btn-alert
+      &:hover
+        color: #fff
+        background-color: #e04343
+        border-color: #e04343
+
+      &:active
+        color: #fff
+        background-color: #c03032
+        border-color: #c03032

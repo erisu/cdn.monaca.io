@@ -1,0 +1,77 @@
+.m-component-textbox
+  background: none white
+  border-radius: 2px
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) inset
+  height: 30px
+  padding: 3px 6px
+  -webkit-box-sizing: border-box
+  line-height: 18px
+  vertical-align: middle
+  border: 1px solid #cccccc
+
+.m-component-combobox
+  background: url(/img/common/bg_combobox.png) no-repeat right center #ffffff
+  border: 1px solid #ccc
+  border-radius: 2px
+  display: inline-block
+  overflow: hidden
+  min-width: 120px
+  vertical-align: middle
+
+  select
+    -webkit-appearance: none
+    background-color: transparent
+    border: none
+    font-size: 1rem
+    padding: 5px 25px 5px 5px
+    width: 100%
+
+.m-component-tooltip
+  background: #f0f0f0
+  box-shadow: 0 3px 14px rgba(0,0,0,0.35)
+  border-radius: 4px
+  color: #333
+  display: block
+  font-size: 10px
+  font-style: normal
+  padding: 10px 15px
+  position: relative
+  transform: translate(-50%, -10px)
+  width: 250px
+
+  &:after
+    top: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(240, 240, 240, 0)
+    border-top-color: #f0f0f0
+    border-width: 11px
+    margin-left: -11px
+
+.m-component-tooltip-icon
+  background: url(/img/new_ide/common/icon_help.png) no-repeat center center
+  display: inline-block
+  margin-left: 5px
+  width: 20px
+  height: 20px
+  vertical-align: middle
+  position: relative
+
+  > .m-component-tooltip
+    opacity: 0.0
+    visibility: hidden
+    position: absolute
+    bottom: 100%
+    left: 10px
+    transition: opacity 0.16s linear 0s, visibility 0s linear 0.16s
+
+  &:hover > .m-component-tooltip
+    display: block
+    opacity: 1.0
+    visibility: visible
+    transition: opacity 0.16s linear 0s, visibility 0s

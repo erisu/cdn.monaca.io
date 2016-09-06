@@ -1,0 +1,37 @@
+ul.m-list-status
+  > li
+    background: none no-repeat 15px 10px
+    border: 1px solid #ddd
+    border-left: 5px solid #aaa
+    box-sizing: border-box
+    margin: 0 0 5px 0
+    min-height: 60px
+    padding: 10px 12px 10px 12px
+
+    &.status-finish
+      border-left-color: #5bb653
+
+    &.status-failed,
+    &.status-cancel,
+    &.status-kill
+      border-left-color: #cc0000
+
+      &.status-process
+        background-image: url(/img/build/spinner.gif)
+        background-position: 12px 10px
+
+      &.status-finish
+        background-image: url(/img/build/icon_check.png)
+
+      &.status-failed,
+      &.status-cancel,
+      &.status-kill
+        background-image: url(/img/build/icon_error.png)
+
+  // Remove the li default min height when condensed
+  &.m-list-status-condensed > li
+    min-height: 0
+
+  // Add additional left padding when icons are enabled
+  &.m-list-status-icon > li
+    padding: 10px 12px 10px 50px

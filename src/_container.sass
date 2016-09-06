@@ -1,0 +1,57 @@
+.m-container-table
+  width: 100%
+  display: table
+
+  > div
+    text-align: right
+    display: table-cell
+
+    &:first-child
+      text-align: left
+
+.m-container
+  font-size: 12px
+  box-sizing: border-box
+  width: 832px
+  border: 1px solid #ccc
+  border-top: 2px solid #0056a7
+  display: inline-block
+
+  &.half
+    width: 408px
+
+  > div
+    width: 100%
+    height: 30px
+    border-top: 1px solid #ccc
+    display: table
+    font-size: 12px
+    font-weight: 300
+
+    &:first-child
+      height: 45px
+
+    > div
+      vertical-align: middle
+      display: table-cell
+      text-align: right
+      padding: 8px
+
+      &.text-left
+        text-align: left
+
+      &:first-child
+        text-align: left
+
+    &:first-child.title
+      border-top: 0px
+      background-color: #f3f3f3
+      font-size: 14px
+      font-weight: 600
+
+  &.display-grid
+    > div:not(.title) > div
+      border-left: 1px solid #ccc
+
+      &:first-child
+        border-left: 0px
