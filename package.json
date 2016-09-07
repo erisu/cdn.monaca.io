@@ -1,20 +1,30 @@
 {
   "name": "monaca-components",
   "version": "1.0.0",
-  "description": "",
+  "description": "Monaca Shared Components",
   "main": "Gruntfile.js",
   "scripts": {
+    "start": "http-server -S -p 2000 ./dist",
     "build": "./node_modules/.bin/grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monaca/cdn.monaca.io.git"
+  },
+  "keywords": [
+    "Monaca"
+  ],
+  "author": "Erisu",
+  "license": "Apache-2.0",
+  "devDependencies": {
     "compass-sass-mixins": "^0.12.7",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-sass": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
     "grunt-task-loader": "^0.6.0"
   }
 }
