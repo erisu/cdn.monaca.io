@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     watch: {
       css: {
-        files: 'src/**/*.sass',
+        files: 'src/**/*',
         tasks: ['default']
       }
     },
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          "dist/monaca-components.css": "src/monaca-components.sass"
+          "dist/css/monaca-components.css": "src/sass/monaca-components.sass"
         }
       }
     },
@@ -50,10 +50,20 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'dist',
+          cwd: 'dist/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'dist',
+          dest: 'dist/css/',
           ext: '.min.css'
+        }]
+      }
+    },
+    copy: {
+      assets: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['img/**'],
+          dest: 'dist/'
         }]
       }
     }
@@ -90,6 +100,6 @@ module.exports = function(grunt) {
     });
   });
 
-  grunt.registerTask('default', ['sass', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
   grunt.registerTask('server', ['default', 'connect', 'displayServerNetworkAddress', 'watch']);
 };
