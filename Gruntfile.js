@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
   require('grunt-task-loader')(grunt);
+  grunt.loadNpmTasks('grunt-aws-s3');
 
   var SERVER_PROTOCOL = 'https';
   var SERVER_PORT = 2000;
@@ -66,6 +67,27 @@ module.exports = function(grunt) {
           dest: 'dist/'
         }]
       }
+    },
+
+    aws_s3: {
+      options: {
+        accessKeyId: grunt.option('aws-key'),
+        secretAccessKey: grunt.option('aws-secret'),
+        uploadConcurrency: 10,
+        downloadConcurrency: 10,
+        bucket: grunt.option('aws-bucket'),
+        region: grunt.option('aws-region')
+      },
+      prod: {
+        files: [{
+          action: "delete", 
+          dest: '/'
+        }, {
+          expand: true, cwd: 
+          'dist', src: ['**'], 
+          dest: ''
+        }]
+      }
     }
   });
 
@@ -73,7 +95,7 @@ module.exports = function(grunt) {
    * Modified for Grunt and Connect
    * Original: http://stackoverflow.com/questions/3653065/get-local-ip-address-in-node-js/8440736#8440736
    */
-  grunt.registerTask('displayServerNetworkAddress', 'Display Network IP Address', function() {
+   grunt.registerTask('displayServerNetworkAddress', 'Display Network IP Address', function() {
     var os = require('os');
     var ifaces = os.networkInterfaces();
 
@@ -100,6 +122,7 @@ module.exports = function(grunt) {
     });
   });
 
-  grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
-  grunt.registerTask('server', ['default', 'connect', 'displayServerNetworkAddress', 'watch']);
-};
+   grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
+   grunt.registerTask('deploy', ['default', 'aws_s3:prod']);
+   grunt.registerTask('server', ['default', 'connect', 'displayServerNetworkAddress', 'watch']);
+ };

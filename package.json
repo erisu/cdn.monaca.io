@@ -20,6 +20,7 @@
   "devDependencies": {
     "compass-sass-mixins": "^0.12.7",
     "grunt": "^1.0.1",
+    "grunt-aws-s3": "^0.14.5",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
