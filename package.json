@@ -6,7 +6,7 @@
   "scripts": {
     "start": "grunt server",
     "build": "./node_modules/.bin/grunt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Add Tests\""
   },
   "repository": {
     "type": "git",
