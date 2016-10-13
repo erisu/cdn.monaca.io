@@ -4,7 +4,7 @@
   "description": "Monaca Shared Components",
   "main": "Gruntfile.js",
   "scripts": {
-    "start": "grunt server",
+    "start": "./node_modules/.bin/grunt server",
     "build": "./node_modules/.bin/grunt",
     "test": "echo \"Add Tests\""
   },
