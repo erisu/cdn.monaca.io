@@ -12,31 +12,23 @@ ul.m-list-status
     min-height: 60px
     padding: 10px 12px 10px 12px
 
+    &.status-process
+      background-image: url(/img/spinner.gif)
+      background-position: 12px 10px
+
     &.status-finish
       border-left-color: #5bb653
+      background-image: url(/img/icon_check.png)
 
     &.status-warning
       border-left-color: #f2d253
+      background-image: url(/img/icon_warning.png)
 
     &.status-failed,
     &.status-cancel,
     &.status-kill
       border-left-color: #cc0000
-
-      &.status-process
-        background-image: url(/img/spinner.gif)
-        background-position: 12px 10px
-
-      &.status-finish
-        background-image: url(/img/icon_check.png)
-
-      &.status-warning
-        background-image: url(/img/icon_warning.png)
-
-      &.status-failed,
-      &.status-cancel,
-      &.status-kill
-        background-image: url(/img/icon_error.png)
+      background-image: url(/img/icon_error.png)
 
   // Remove the li default min height when condensed
   &.m-list-status-condensed > li
