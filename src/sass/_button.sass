@@ -24,6 +24,11 @@ a, button
     display: inline-block
     padding: 0px 16px
     line-height: 1.6
+    // btn-small is default with m-btn
+    min-width: 90px
+    height: 30px
+    font-weight: 600
+    font-size: 13px
 
     &:hover
       background-color: #e8e8e8
@@ -32,12 +37,6 @@ a, button
     &:active
       background-color: #d8d8d8
       border-color: #a8a8a8
-
-    // btn-small is default with m-btn
-    min-width: 90px
-    height: 30px
-    font-weight: 600
-    font-size: 13px
 
     &.m-btn-large
       width: auto
@@ -92,3 +91,7 @@ a, button
         color: #fff
         background-color: #c03032
         border-color: #c03032
+    
+    &.m-btn-icon
+      min-width: 20px
+      padding: 0 10px
