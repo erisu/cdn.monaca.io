@@ -42,6 +42,18 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      dist: {
+        options: {
+          map: false,
+          browsers: ['last 2 version']
+        },
+        files: {
+          'dist/css/monaca-components.css': 'dist/css/monaca-components.css'
+        }
+      }
+    },
+
     cssmin: {
       options: {
         shorthandCompacting: true,
@@ -122,7 +134,7 @@ module.exports = function(grunt) {
     });
   });
 
-   grunt.registerTask('default', ['sass', 'cssmin', 'copy']);
+   grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'copy']);
    grunt.registerTask('deploy', ['default', 'aws_s3:prod']);
    grunt.registerTask('server', ['default', 'connect', 'displayServerNetworkAddress', 'watch']);
  };
