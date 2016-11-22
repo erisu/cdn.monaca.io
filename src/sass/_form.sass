@@ -1,5 +1,5 @@
 .m-component-textbox
-  background: none white
+  background: none #fff
   border-radius: 2px
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) inset
   height: 30px
@@ -8,6 +8,9 @@
   line-height: 18px
   vertical-align: middle
   border: 1px solid #cccccc
+
+  &.failed
+    border-color: #ff7870
 
 .m-component-combobox
   background: url('/img/bg_combobox.png') no-repeat right center #ffffff
@@ -23,7 +26,10 @@
     background-color: transparent
     border: none
     font-size: 1rem
-    padding: 5px 25px 5px 5px
+    // padding: 5px 25px 5px 5px
+    padding: 8px 25px 7px 5px
+    line-height: 1
+    outline: none
     width: 100%
 
 .m-component-tooltip
