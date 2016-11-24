@@ -62,6 +62,10 @@ a, button
       &:active
         background-color: #44a900
 
+      &[disabled],
+      &.disable
+        opacity: 0.4
+
     &.m-btn-blue
       color: #fff
       background-color: #468fff
@@ -74,6 +78,10 @@ a, button
       &:active
         background-color: #006cc8
         border-color: #006cc8
+
+      &[disabled],
+      &.disable
+        opacity: 0.4
 
         &:hover, &:active
         cursor: default
@@ -93,6 +101,10 @@ a, button
         background-color: #cccccc
         border-color: #9c9c9c
 
+      &[disabled],
+      &.disable
+        opacity: 0.4
+
     &.m-btn-alert
       &:hover
         color: #fff
@@ -103,6 +115,10 @@ a, button
         color: #fff
         background-color: #c03032
         border-color: #c03032
+
+      &[disabled],
+      &.disable
+        opacity: 0.4
     
     &.m-btn-icon
       min-width: 20px
